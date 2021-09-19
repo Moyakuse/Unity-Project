@@ -10,6 +10,11 @@ TagManager:
   - Rooms
   - Bullet
   - Bottom
+  - Spawner
+  - Boss
+  - Basement
+  - BossTag
+  - RoomDespawner
   layers:
   - Default
   - TransparentFX

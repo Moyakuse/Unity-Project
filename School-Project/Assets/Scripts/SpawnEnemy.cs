@@ -15,7 +15,6 @@ public class SpawnEnemy : MonoBehaviour
     void Start()
     {
         wall = GetComponent<Collider2D>();
-
     }
 
 

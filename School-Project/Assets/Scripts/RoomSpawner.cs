@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class RoomSpawner : MonoBehaviour
 {
@@ -13,6 +15,14 @@ public class RoomSpawner : MonoBehaviour
     {
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
         Invoke("Spawn", 0.1f);
+    }
+
+    private void Update()
+    {
+        if (Input.GetButton("Jump"))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     void Spawn()
@@ -48,7 +58,7 @@ public class RoomSpawner : MonoBehaviour
     {
         if (other.CompareTag("SpawnPoint"))
         {
-            Destroy(gameObject);
+            spawned = true;
         }
     }
 }
